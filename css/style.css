@@ -1,0 +1,175 @@
+html,body{
+    overflow-x: hidden;
+
+}
+.todoContainerBlock{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #ddd;
+    border-radius: 10px;
+
+}
+.todoCreate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoCreate input{
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+}
+.todoCreate button{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+li{
+    /* margin-top: 30px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+}
+li::before{
+    position: absolute;
+    content: '\26AC';
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+li.checked::before{
+    content: '✓';
+    top: 0;
+    color: green;
+}
+li .grandParent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* cards css starts here */
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+}
+.cardContainer .card{
+    height: 250px;
+    background-color: red;
+}
+
+/* registration form css starts here */
+.registrationContainer{
+    background-color: #000;
+    background-image: url('../img/black-bg.avif');
+    width: 100vw;
+    background-size: contain;
+    background-position: center;
+    font-family: 'cursive, sans-serif';
+    padding-bottom: 50px;
+}
+.form{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px 50px;
+    margin-top: 30px;
+    backdrop-filter: blur(5px);
+}
+.form h1{
+    color: #eee;
+    font-weight: 800;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 25px;
+}
+.form label{
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+.form .form-outline{
+    display: block;
+    margin-bottom: 15px;
+}
+.form .form-outline input{
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 0.5px solid #ddd;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #ddd;
+}
+.form button{
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: green;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-top: 15px;
+}
+.registrationContainer #userList{
+    padding: 25px 50px;
+    border: 1px solid #fff;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+.registrationContainer .personDetails{
+    color: #fff;
+    padding: 10px 0;
+}
+.registrationContainer .personDetails{
+    margin: 0;
+}
+.registrationContainer .personDetails button{
+    background-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    margin: 0 5px;
+}
+
+/* pagination css starts here */
+.wrapper .pagination{
+    display: flex;
+    justify-content: flex-end;
+}
+.wrapper .pagination span{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.wrapper .pagination .link{
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+.wrapper .pagination .link.active{
+    background-color: orangered;
+}
+.wrapper .pagination .link:hover{
+    background-color: orangered;
+}
